@@ -66,3 +66,56 @@ try:
 
 except IOError as hiba:
     print("Nem sikerült a fájlt beolvasni",hiba)
+
+#4. feladat
+aslista = []
+
+for elem in lista_3:
+    if elem.lower().endswith("és") and elem not in aslista:
+        aslista.append(elem)
+print(aslista)
+
+try:
+    with open("scifi_output.txt","a",encoding = 'utf-8')as fajl:
+        
+        for elem in aslista:
+            fajl.write(elem+"\n")
+        
+except IOError as ex:
+    print(ex)
+
+#5. feladat
+alista = []
+
+for elem in lista_3:
+    if elem.lower().startswith("a") and (elem.lower() not in ["a","az"]):
+        alista.append(elem)
+print(len(alista))
+
+#6. feladat
+try:
+    with open("scifi_output.txt","a",encoding = 'utf-8')as fajl:
+        
+        fajl.write("A jövőben szó első előfordulásának helye: "+str(szoveg.find("jövőben"))+"\n")
+        
+except IOError as ex:
+    print(ex)
+
+#7. feladat
+tizeslista = []
+
+for elem in lista_3:
+    elem = elem.lower()
+    if len(elem) >= 10 and elem not in tizeslista:
+        tizeslista.append(elem)
+tizeslista.sort()
+print(tizeslista)
+
+try:
+    with open("output.txt","w",encoding = 'utf-8')as fajl:
+        
+        for elem in tizeslista:
+            fajl.write(elem+"\n")
+        
+except IOError as ex:
+    print(ex)
