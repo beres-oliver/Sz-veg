@@ -51,4 +51,18 @@ try:
 
 except IOError as hiba:
     print("Nem sikerült a fájlt beolvasni",hiba)
-    
+
+# 3. feladat
+szoveg = szoveg.replace(',','').replace('.','').replace('*','')
+print(szoveg)
+
+lista_3 = szoveg.strip().split(' ')
+print(lista_3)
+
+try:
+    with open("scifi_output.txt",'a',encoding="utf-8")as fajl:
+        
+        fajl.write("A lista hossza: "+str(len(lista_3))+'\n')
+
+except IOError as hiba:
+    print("Nem sikerült a fájlt beolvasni",hiba)
