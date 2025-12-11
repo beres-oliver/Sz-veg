@@ -1,13 +1,2 @@
-cselekmény
-elfeledett
-fordulatos
-főszereplő
-főszereplő:
-kritikusok
-különleges
-mesterkéltek
-posztapokalipszisbe
-posztapokaliptikus
-párbeszédek
-technológia
-világépítés
+1. feladat 
+ ('Karakterek sz�ma (enterek n�lk�l): ', 1136)
