@@ -45,3 +45,22 @@ try:
         
 except IOError as ex:
     print(ex)
+    
+#feladat 4.
+print(string.hexdigits)
+
+sorok = szöv.split('\n')
+szavak = []
+
+for sor in sorok:
+    sor_darabok = sor.split(' ')
+    for sordarab in sor_darabok:
+        szavak.append(sordarab)
+        
+for szo in szavak:
+    if ("A" or '5' or '3' or 'b' or '?') in szo:
+        i = 0
+        while i < len(szo) and szo[i] in string.hexdigits:
+            i += 1
+        if i == len(szo):
+            print("megvan",szo)  
