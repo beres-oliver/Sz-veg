@@ -1,3 +1,4 @@
+import string
 
 try:
     with open("input.txt","r",encoding = 'utf-8')as fajl:
@@ -22,6 +23,14 @@ def feladat2():
 
     return ("Szavak száma: ",len(szavak))
 
+def feladat3():
+    kisbetűs = karakterlánc.lower()
+    for központ in string.punctuation:
+        kisbetűs = kisbetűs.replace(központ,'')
+    
+    return kisbetűs
+
+
 try:
     with open("output.txt","w")as fajl:
         
@@ -29,3 +38,7 @@ try:
         
 except IOError as ex:
     print(ex)
+print(string.punctuation)
+
+
+print(feladat3())
